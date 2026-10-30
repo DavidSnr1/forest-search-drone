@@ -1,0 +1,12 @@
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+.pytest_cache/
+
+# macOS
+.DS_Store
+
+# PX4 wird separat geklont (siehe README), nicht Teil dieses Repos
+PX4-Autopilot/
