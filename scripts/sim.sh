@@ -24,7 +24,7 @@ case "${1:-start}" in
     # VNC-Desktop nur starten, wenn er nicht schon läuft
     if ! pgrep -f "Xtightvnc :1" > /dev/null; then
       rm -f /tmp/.X1-lock /tmp/.X11-unix/X1
-      vncserver :1 -geometry 1920x1080 > /dev/null 2>&1
+      vncserver :1 -geometry 1920x1080 -localhost -nolisten tcp > /dev/null 2>&1
     fi
     # Browser-Viewer für den VNC-Desktop; VS Code leitet Port 6080
     # automatisch weiter und öffnet ihn im Browser
@@ -48,6 +48,10 @@ case "${1:-start}" in
       sudo nvidia-xconfig -a --allow-empty-initial-configuration \
         --use-display-device=None --virtual=1920x1080 \
         --busid "$BUSID" -o /etc/X11/xorg-vgl.conf > /dev/null
+      # Ubuntu 24.04 setzt den NVIDIA-Modulpfad nur, wenn nvidia_drm geladen
+      # ist (ohne Monitor/Display-Manager nicht der Fall) -> fest eintragen
+      sudo sed -i '/^Section "Files"/a\    ModulePath     "/usr/lib/x86_64-linux-gnu/nvidia/xorg"\n    ModulePath     "/usr/lib/xorg/modules"' \
+        /etc/X11/xorg-vgl.conf
     fi
     if ! pgrep -f "Xorg :0" > /dev/null; then
       sudo bash -c 'nohup Xorg :0 -config xorg-vgl.conf -nolisten tcp -noreset vt7 > /var/log/xorg-vgl.out 2>&1 &'
