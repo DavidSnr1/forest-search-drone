@@ -6,7 +6,7 @@ class Ray:
     origin: np.ndarray
     direction: np.ndarray
 
-def make_Ray(origin, direction):
+def make_ray(origin, direction):
     origin = np.array(origin, dtype=float)
     direction = np.array(direction, dtype=float)
     length = np.linalg.norm(direction)
@@ -29,3 +29,14 @@ def triangulate(rays):
         return np.linalg.solve(A_sum, B_sum)
     except np.linalg.LinAlgError as e:
         raise ValueError("Fast alle Strahlen parallel") from e
+
+
+def residual_error(rays, point):
+    """RMS-Abstand des Punkts zu den Strahlen (0 = alle Strahlen treffen ihn genau)."""
+    point = np.asarray(point, dtype=float)
+    I = np.eye(3)
+    distances = [
+        np.linalg.norm((I - np.outer(ray.direction, ray.direction)) @ (point - ray.origin))
+        for ray in rays
+    ]
+    return float(np.sqrt(np.mean(np.square(distances))))

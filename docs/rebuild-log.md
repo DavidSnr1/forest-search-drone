@@ -132,3 +132,68 @@ Siehe `infra/vm-config/README.md`. Nicht gesichert (Geheimnisse): `~/.vnc/passwd
 - **Offen (nicht Umgebung):** `tests/test_triangulation.py` importiert `make_ray` und `residual_error`;
   `src/logic/triangulation.py` hat nur `make_Ray` (großes R) und kein `residual_error`. Stand seit Commit 4b6440d (2026-09-15),
   also schon vor dem Upgrade. Nicht angefasst. Rest: 8 passed.
+
+### 3.7 Tailscale und Firewall
+- Offizielle Quelle (pkgs.tailscale.com/stable, noble): Key `/usr/share/keyrings/tailscale-archive-keyring.gpg`
+  (Tailscale Inc., 2596A99E…957F5868), `/etc/apt/sources.list.d/tailscale.list` → **tailscale 1.104.7**, `tailscaled` aktiv.
+- `sudo tailscale up` gestartet, Login-Link an David gegeben (wartet auf Anmeldung).
+- ufw: noch nicht aktiviert (Regel 2, Rückfrage offen).
+- `tailscale up` → Success. Gerät `ps16xhqf2tly`, Tailscale-IP 100.102.10.67.
+
+## Abnahme
+- **#6 ROS 2:** `MicroXRCEAgent udp4 -p 8888` + `HEADLESS=1 make px4_sitl gz_x500` → Session established,
+  `ros2 topic list` → 65 `/fmu/...`-Topics, u. a. `/fmu/out/vehicle_status_v1`, `/fmu/out/vehicle_odometry`.
+  `ros2 topic echo --once /fmu/out/vehicle_status_v1` liefert Daten (arming_state 1, nav_state 4). ✔
+- **#4 `make sim`:** tmux-Sitzung `drone` mit 5 Fenstern. Screenshot von :1 (per `gst-launch ximagesrc`, kein ImageMagick/ffmpeg):
+  Gazebo-GUI (VirtualGL) zeigt Baylands + x500_gimbal, RTF 98,9 %; Kamerafenster `gst-launch` zeigt Bild;
+  QGC v5.1.5 verbunden (Hold, Baylands-Karte; beim 1. Start Hinweis „Offline Map Cache upgraded“); PX4 „Ready for takeoff!“. ✔
+  (`make sim` aus einer Shell ohne Terminal endet mit `open terminal failed` beim `tmux attach` – Sitzung läuft trotzdem.)
+- **#8 Ports:** `ss -tlnp` → 5901 und 6080 nur 127.0.0.1; öffentlich nur 22. Sonst nur localhost bzw. Tailscale-IP. ✔
+
+### Firewall (nach Freigabe durch David)
+- SSH lauscht nur auf 22 (`sshd -T`), Port 1022 vom Upgrade nicht mehr aktiv.
+- `sudo ufw allow OpenSSH` → `sudo ufw allow in on tailscale0` → `sudo ufw --force enable`.
+  Status: active, Default deny incoming / allow outgoing / deny routed. Login-Test im zweiten Fenster: siehe unten.
+- Login-Test im zweiten SSH-Fenster (`ssh paperspace-drone`): klappt (David). ✔
+
+## Abnahme (Fortsetzung)
+- **#9 `make stop`:** „Alles beendet.“, keine px4-, gz-, QGC- oder gst-Prozesse mehr, tmux-Sitzung weg. ✔
+  (VNC-Desktop :1, Xorg :0 und websockify laufen weiter, wie in `sim.sh` vorgesehen.)
+- **#7 pytest:** Auf Wunsch von David `src/logic/triangulation.py` angepasst: `make_Ray` → `make_ray`,
+  `residual_error(rays, point)` ergänzt (RMS-Abstand des Punkts zu den Strahlen). → **13 passed**. ✔
+
+| # | Test | Ergebnis |
+|---|---|---|
+| 1 | `lsb_release`, `uname -r` | Ubuntu 24.04.5 LTS, 6.8.0-149-generic ✔ |
+| 2 | `nvidia-smi` | Quadro M4000, 580.178.04 ✔ |
+| 3 | `vglrun -d :0 glxinfo` | Quadro M4000/PCIe/SSE2 ✔ |
+| 4 | `make sim` | Gazebo + Drohne, Kamerabild, QGC verbunden ✔ |
+| 5 | pxh `ver all` | Release 1.17.0 ✔ |
+| 6 | Agent + `ros2 topic list/echo` | 65 `/fmu/`-Topics, `vehicle_status_v1` mit Daten ✔ |
+| 7 | `pytest` | 13 passed ✔ |
+| 8 | `ss -tlnp`, `ufw status` | 5901/6080 nur 127.0.0.1; ufw active ✔ |
+| 9 | `make stop` | sauber beendet ✔ |
+
+## Installierte Versionen (Stand 2026-11-13)
+
+| Komponente | Version |
+|---|---|
+| Ubuntu | 24.04.5 LTS (noble) |
+| Kernel | 6.8.0-149-generic |
+| NVIDIA-Treiber | 580.178.04 (`nvidia-driver-580`), CUDA 13.0 |
+| Gazebo | Harmonic (gz-harmonic 1.0.0-1~noble), gz-sim 8.15.0 |
+| PX4 | v1.17.0 (Tag, git d6f12ad1c4) + `infra/px4-gz-submodule.patch` |
+| ROS 2 | Jazzy (ros-jazzy-desktop 0.11.0, Build 2026-10-06) |
+| px4_msgs / px4_ros_com | release/1.17 @86d8239 / main @86e9aeb |
+| MicroXRCEAgent | v2.4.3 (Quellcode, `/usr/local/bin`) |
+| Python (venv) | 3.12.3, `--system-site-packages` |
+| QGroundControl | v5.1.5 (AppImage) |
+| VirtualGL | 3.1.5 (offizielle apt-Quelle) |
+| VNC / noVNC / websockify | tightvncserver 1.3.10-8 / novnc 1.3.0 / websockify 0.10.0 |
+| GStreamer | 1.24.2 |
+| Tailscale | 1.104.7 |
+
+### Aufräumen bei Gelegenheit (nicht erledigt, nichts davon stört)
+- `~/QGroundControl.AppImage.old`, `/etc/X11/xorg-vgl.conf.bak-2204`, `/etc/apt/sources.list.d.jammy-backup/`
+- Alter Kernel 5.15.0-203 samt `linux-objects-nvidia-580-5.15.0-203` (→ `sudo apt autoremove` nach Prüfung)
+- Unversionierte `main`-Reste im PX4-Ordner (siehe 3.3), Stash im Submodul `gz`
