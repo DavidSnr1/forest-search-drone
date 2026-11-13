@@ -48,3 +48,19 @@ Siehe `infra/vm-config/README.md`. Nicht gesichert (Geheimnisse): `~/.vnc/passwd
 - `~/fotos` (878 MB) liegt außerhalb des Repos und übersteht das In-Place-Upgrade; bei Neuanlage einer VM ginge es verloren.
 - VNC (5901) lief zum Zeitpunkt der Inventur nicht. `sim.sh` startet `vncserver :1` **ohne** `-localhost` → in 3.2 ändern.
 - Fremde Quellen nach dem Upgrade: `gazebo-stable.list` (jammy → durch `ubuntu.sh` neu), `paperspace.list` (Paperspace-Agent, distributionsunabhängig).
+
+## Teil 2 – Upgrade (David, von Hand)
+- Ergebnis: Ubuntu 24.04.5 LTS (noble), Kernel 6.8.0-149-generic. Alter Kernel 5.15.0-203 noch installiert.
+- Fremdquellen wurden als `*.distUpgrade` deaktiviert, NVIDIA-Treiber war entfernt.
+
+## Teil 3 – Neuaufbau (2026-11-13)
+
+### 3.1 Basis und NVIDIA
+- `/etc/apt/sources.list.d/*.distUpgrade` (gazebo-stable jammy, paperspace) nach
+  `/etc/apt/sources.list.d.jammy-backup/` verschoben (nicht gelöscht).
+- `paperspace.list` wieder aktiviert (Quelle ist nicht an die Ubuntu-Version gebunden). Gazebo-Quelle kommt mit `ubuntu.sh`.
+- `apt-get update && full-upgrade` (`--force-confold`), `autoremove`: ohne Fehler.
+- `ubuntu-drivers devices`: M4000 (GM204GL), empfohlen wäre 470, verfügbar 580 / 580-server.
+  Installiert: `nvidia-driver-580` 580.178.04-0ubuntu0.24.04.1 (voller Treiber, für Xorg :0).
+- DKMS: `nvidia/580.178.04, 6.8.0-149-generic: installed`. Kein EFI → kein Secure Boot, keine MOK-Signierung nötig.
+- **Neustart nötig.** Danach weiter mit Check `nvidia-smi`, dann 3.2.
