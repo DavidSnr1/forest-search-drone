@@ -1,0 +1,2 @@
+Filesystem                   Size  Used Avail Use% Mounted on
+/dev/mapper/ubuntu--vg-root   97G   25G   69G  27% /

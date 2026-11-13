@@ -1,0 +1,6 @@
+### /etc/apt/sources.list.d/gazebo-stable.list
+deb [arch=amd64 signed-by=/usr/share/keyrings/pkgs-osrf-archive-keyring.gpg] http://packages.osrfoundation.org/gazebo/ubuntu-stable jammy main
+
+### /etc/apt/sources.list.d/paperspace.list
+deb [signed-by=/usr/share/keyrings/paperspace.asc] https://metadata.paperspace.com/v2/apt paperspace main
+

@@ -1,0 +1,1 @@
+> export PATH=$PATH:/opt/xtensa-esp-elf/bin/

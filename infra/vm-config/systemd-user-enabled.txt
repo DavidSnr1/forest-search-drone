@@ -1,0 +1,16 @@
+UNIT FILE                                    STATE   VENDOR PRESET
+pipewire-media-session.service               enabled enabled
+pipewire.service                             enabled enabled
+pulseaudio.service                           enabled enabled
+session-migration.service                    enabled enabled
+xdg-desktop-portal-rewrite-launchers.service enabled enabled
+dirmngr.socket                               enabled enabled
+gpg-agent-browser.socket                     enabled enabled
+gpg-agent-extra.socket                       enabled enabled
+gpg-agent-ssh.socket                         enabled enabled
+gpg-agent.socket                             enabled enabled
+pipewire.socket                              enabled enabled
+pk-debconf-helper.socket                     enabled enabled
+pulseaudio.socket                            enabled enabled
+
+13 unit files listed.

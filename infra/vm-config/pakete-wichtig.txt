@@ -1,0 +1,164 @@
+ii  gir1.2-gst-plugins-base-1.0:amd64              1.20.1-1ubuntu0.6                       amd64        GObject introspection data for the GStreamer Plugins Base library
+ii  gir1.2-gstreamer-1.0:amd64                     1.20.3-0ubuntu1.1                       amd64        GObject introspection data for the GStreamer library
+ii  gstreamer1.0-gl:amd64                          1.20.1-1ubuntu0.6                       amd64        GStreamer plugins for GL
+ii  gstreamer1.0-libav:amd64                       1.20.3-0ubuntu1                         amd64        ffmpeg plugin for GStreamer
+ii  gstreamer1.0-plugins-bad:amd64                 1.20.3-0ubuntu1.1                       amd64        GStreamer plugins from the "bad" set
+ii  gstreamer1.0-plugins-base:amd64                1.20.1-1ubuntu0.6                       amd64        GStreamer plugins from the "base" set
+ii  gstreamer1.0-plugins-good:amd64                1.20.3-0ubuntu1.7                       amd64        GStreamer plugins from the "good" set
+ii  gstreamer1.0-plugins-ugly:amd64                1.20.1-1                                amd64        GStreamer plugins from the "ugly" set
+ii  gstreamer1.0-tools                             1.20.3-0ubuntu1.1                       amd64        Tools for use with GStreamer
+ii  gstreamer1.0-x:amd64                           1.20.1-1ubuntu0.7                       amd64        GStreamer plugins for X11 and Pango
+ii  gz-harmonic                                    1.0.0-1~jammy                           amd64        Collection of Gazebo packages - Harmonic
+ii  gz-launch7-cli                                 7.1.2-1~jammy                           amd64        Gazebo Launch Library - CLI
+ii  gz-plugin2-cli                                 2.0.4-1~jammy                           amd64        Collection of useful code used by robotics apps - CLI tool
+ii  gz-sim8-cli                                    8.15.0-1~jammy                          amd64        Gazebo Sim classes and functions for robot apps - CLI
+ii  gz-tools2:amd64                                2.0.4-1~jammy                           amd64        Entry point for using all the suite of Gazebo tools - app
+ii  gz-transport13-cli                             13.6.0-1~jammy                          amd64        Gazebo transport Library - CLI
+ii  libgstreamer-gl1.0-0:amd64                     1.20.1-1ubuntu0.6                       amd64        GStreamer GL libraries
+ii  libgstreamer-plugins-bad1.0-0:amd64            1.20.3-0ubuntu1.1                       amd64        GStreamer libraries from the "bad" set
+ii  libgstreamer-plugins-base1.0-0:amd64           1.20.1-1ubuntu0.6                       amd64        GStreamer libraries from the "base" set
+ii  libgstreamer-plugins-base1.0-dev:amd64         1.20.1-1ubuntu0.6                       amd64        GStreamer development files for libraries from the "base" set
+ii  libgstreamer-plugins-good1.0-0:amd64           1.20.3-0ubuntu1.7                       amd64        GStreamer development files for libraries from the "good" set
+ii  libgstreamer1.0-0:amd64                        1.20.3-0ubuntu1.1                       amd64        Core GStreamer libraries and elements
+ii  libgstreamer1.0-dev:amd64                      1.20.3-0ubuntu1.1                       amd64        GStreamer core development files
+ii  libgz-cmake3-dev:amd64                         3.6.0-1~jammy                           amd64        Gazebo CMake Library - Development files
+ii  libgz-common5:amd64                            5.9.0-1~jammy                           amd64        Collection of useful code used by robotics apps - Shared library
+ii  libgz-common5-av:amd64                         5.9.0-1~jammy                           amd64        Collection of useful code used by robotics apps - AV libraries
+ii  libgz-common5-av-dev:amd64                     5.9.0-1~jammy                           amd64        Collection of useful code used by robotics apps - AV libraries
+ii  libgz-common5-core-dev:amd64                   5.9.0-1~jammy                           amd64        Collection of useful code used by robotics apps - Core dev files
+ii  libgz-common5-dev:amd64                        5.9.0-1~jammy                           amd64        Collection of useful code used by robotics apps - Metapackage
+ii  libgz-common5-events:amd64                     5.9.0-1~jammy                           amd64        Collection of useful code used by robotics apps - Events libraries
+ii  libgz-common5-events-dev:amd64                 5.9.0-1~jammy                           amd64        Collection of useful code used by robotics apps - Events dev files
+ii  libgz-common5-geospatial:amd64                 5.9.0-1~jammy                           amd64        Collection of useful code used by robotics apps - Geospatial libries
+ii  libgz-common5-geospatial-dev:amd64             5.9.0-1~jammy                           amd64        Collection of useful code used by robotics apps - Geospatial dev files
+ii  libgz-common5-graphics:amd64                   5.9.0-1~jammy                           amd64        Collection of useful code used by robotics apps - Graphics libraries
+ii  libgz-common5-graphics-dev:amd64               5.9.0-1~jammy                           amd64        Collection of useful code used by robotics apps - Graphics dev files
+ii  libgz-common5-io:amd64                         5.9.0-1~jammy                           amd64        Collection of useful code used by robotics apps - I/O libraries
+ii  libgz-common5-io-dev:amd64                     5.9.0-1~jammy                           amd64        Collection of useful code used by robotics apps - I/O dev files
+ii  libgz-common5-profiler:amd64                   5.9.0-1~jammy                           amd64        Collection of useful code used by robotics apps - Profiler libs
+ii  libgz-common5-profiler-dev:amd64               5.9.0-1~jammy                           amd64        Collection of useful code used by robotics apps - Profiler dev file
+ii  libgz-common5-testing:amd64                    5.9.0-1~jammy                           amd64        Collection of useful code used by robotics apps - Testing libries
+ii  libgz-common5-testing-dev:amd64                5.9.0-1~jammy                           amd64        Collection of useful code used by robotics apps - Testing dev files
+ii  libgz-fuel-tools9:amd64                        9.1.1-1~jammy                           amd64        Gazebo fuel-tools classes and functions - Shared library
+ii  libgz-fuel-tools9-dev:amd64                    9.1.1-1~jammy                           amd64        Gazebo fuel-tools classes and functions - Development files
+ii  libgz-gui8:amd64                               8.4.0-1~jammy                           amd64        Gazebo Gui classes and functions for robot apps - Shared library
+ii  libgz-gui8-dev:amd64                           8.4.0-1~jammy                           amd64        Gazebo Gui classes and functions for robot apps - Development files
+ii  libgz-launch7:amd64                            7.1.2-1~jammy                           amd64        Gazebo Launch Library - Launch libraries
+ii  libgz-launch7-dev:amd64                        7.1.2-1~jammy                           amd64        Gazebo Launch Library - Development files
+ii  libgz-math7:amd64                              7.7.0-1~jammy                           amd64        Gazebo Math Library - Shared library
+ii  libgz-math7-dev:amd64                          7.7.0-1~jammy                           amd64        Gazebo Math Library - Development files
+ii  libgz-math7-eigen3-dev:amd64                   7.7.0-1~jammy                           amd64        Gazebo Math Library - Eigen3 Development files
+ii  libgz-msgs10:amd64                             10.4.0-1~jammy                          amd64        Set of message definitions used by robotics apps - Shared library
+ii  libgz-msgs10-dev:amd64                         10.4.0-1~jammy                          amd64        Set of message definitions used by robotics apps - Dev files
+ii  libgz-physics7:amd64                           7.8.0-1~jammy                           amd64        Gazebo Physics classes and functions for robot apps - Shared library
+ii  libgz-physics7-bullet:amd64                    7.8.0-1~jammy                           amd64        Gazebo Physics classes and functions for robot apps - Bullet engine
+ii  libgz-physics7-bullet-dev:amd64                7.8.0-1~jammy                           amd64        Gazebo Physics classes and functions for robot apps - Development files
+ii  libgz-physics7-core-dev:amd64                  7.8.0-1~jammy                           amd64        Gazebo Physics classes and functions for robot apps - Development files
+ii  libgz-physics7-dartsim:amd64                   7.8.0-1~jammy                           amd64        Gazebo Physics classes and functions for robot apps - Dartsim library
+ii  libgz-physics7-dartsim-dev:amd64               7.8.0-1~jammy                           amd64        Gazebo Physics classes and functions for robot apps - Development files
+ii  libgz-physics7-dev:amd64                       7.8.0-1~jammy                           amd64        Gazebo Physics classes and functions for robot apps - Metapackage
+ii  libgz-physics7-heightmap-dev:amd64             7.8.0-1~jammy                           amd64        Gazebo Physics classes and functions for robot apps - Heightmap Dev files
+ii  libgz-physics7-mesh-dev:amd64                  7.8.0-1~jammy                           amd64        Gazebo Physics classes and functions for robot apps - Mesh Dev files
+ii  libgz-physics7-sdf-dev:amd64                   7.8.0-1~jammy                           amd64        Gazebo Physics classes and functions for robot apps - SDF Dev files
+ii  libgz-physics7-tpe:amd64                       7.8.0-1~jammy                           amd64        Gazebo Physics classes and functions for robot apps - TPE library
+ii  libgz-physics7-tpe-dev:amd64                   7.8.0-1~jammy                           amd64        Gazebo Physics classes and functions for robot apps - Development files
+ii  libgz-physics7-tpelib:amd64                    7.8.0-1~jammy                           amd64        Gazebo Physics classes and functions for robot apps - TPE library
+ii  libgz-physics7-tpelib-dev:amd64                7.8.0-1~jammy                           amd64        Gazebo Physics classes and functions for robot apps - Development files
+ii  libgz-plugin2:amd64                            2.0.4-1~jammy                           amd64        Gazebo Plugin Library - Shared library
+ii  libgz-plugin2-dev:amd64                        2.0.4-1~jammy                           amd64        Gazebo Plugin Library - Development files
+ii  libgz-rendering8:amd64                         8.2.3-1~jammy                           amd64        Gazebo Rendering classes and functions for robot apps - Shared library
+ii  libgz-rendering8-core-dev:amd64                8.2.3-1~jammy                           amd64        Gazebo Rendering classes and functions - Core development files
+ii  libgz-rendering8-dev:amd64                     8.2.3-1~jammy                           amd64        Gazebo Rendering classes and functions for robot apps - Metapackage
+ii  libgz-rendering8-ogre1:amd64                   8.2.3-1~jammy                           amd64        Gazebo Rendering classes and functions for robot apps - Ogre1 lib
+ii  libgz-rendering8-ogre1-dev:amd64               8.2.3-1~jammy                           amd64        Gazebo Rendering classes and functions for robot apps - Ogre1 dev files
+ii  libgz-rendering8-ogre2:amd64                   8.2.3-1~jammy                           amd64        Gazebo Rendering classes and functions for robot apps - Development files
+ii  libgz-rendering8-ogre2-dev:amd64               8.2.3-1~jammy                           amd64        Gazebo Rendering classes and functions for robot apps - Development files
+ii  libgz-sensors8:amd64                           8.2.2-1~jammy                           amd64        Gazebo Sensors classes and functions for robot apps - Shared library
+ii  libgz-sensors8-air-pressure:amd64              8.2.2-1~jammy                           amd64        Gazebo Sensors classes and functions for robot apps - Lib air-pressure
+ii  libgz-sensors8-air-pressure-dev:amd64          8.2.2-1~jammy                           amd64        Gazebo Sensors classes and functions for robot apps - Dev files air-pressure
+ii  libgz-sensors8-air-speed:amd64                 8.2.2-1~jammy                           amd64        Gazebo Sensors classes and functions for robot apps - Lib air-speed
+ii  libgz-sensors8-air-speed-dev:amd64             8.2.2-1~jammy                           amd64        Gazebo Sensors classes and functions for robot apps - Dev files air-speed
+ii  libgz-sensors8-altimeter:amd64                 8.2.2-1~jammy                           amd64        Gazebo Sensors classes and functions for robot apps - Lib altimeter
+ii  libgz-sensors8-altimeter-dev:amd64             8.2.2-1~jammy                           amd64        Gazebo Sensors classes and functions for robot apps - Dev files altimeter
+ii  libgz-sensors8-boundingbox-camera:amd64        8.2.2-1~jammy                           amd64        Gazebo Sensors classes and functions for robot apps - Lib Bounding Box Camera
+ii  libgz-sensors8-boundingbox-camera-dev:amd64    8.2.2-1~jammy                           amd64        Gazebo Sensors classes and functions for robot apps - Dev files Bounding Box Camera
+ii  libgz-sensors8-camera:amd64                    8.2.2-1~jammy                           amd64        Gazebo Sensors classes and functions for robot apps - Lib Camera
+ii  libgz-sensors8-camera-dev:amd64                8.2.2-1~jammy                           amd64        Gazebo Sensors classes and functions for robot apps - Dev files Camera
+ii  libgz-sensors8-core-dev:amd64                  8.2.2-1~jammy                           amd64        Gazebo Sensors classes and functions for robot apps - Development files
+ii  libgz-sensors8-depth-camera:amd64              8.2.2-1~jammy                           amd64        Gazebo Sensors classes and functions for robot apps - Lib depth-camera
+ii  libgz-sensors8-depth-camera-dev:amd64          8.2.2-1~jammy                           amd64        Gazebo Sensors classes and functions for robot apps - Dev files depth-camera
+ii  libgz-sensors8-dev:amd64                       8.2.2-1~jammy                           amd64        Gazebo Sensors classes and functions for robot apps - Metapackage
+ii  libgz-sensors8-dvl:amd64                       8.2.2-1~jammy                           amd64        Gazebo Sensors classes and functions for robot apps - Lib DVL
+ii  libgz-sensors8-dvl-dev:amd64                   8.2.2-1~jammy                           amd64        Gazebo Sensors classes and functions for robot apps - Dev files DVL
+ii  libgz-sensors8-force-torque:amd64              8.2.2-1~jammy                           amd64        Gazebo Sensors classes and functions for robot apps - Lib force-torque
+ii  libgz-sensors8-force-torque-dev:amd64          8.2.2-1~jammy                           amd64        Gazebo Sensors classes and functions for robot apps - Dev files force-torque
+ii  libgz-sensors8-gpu-lidar:amd64                 8.2.2-1~jammy                           amd64        Gazebo Sensors classes and functions for robot apps - Lib gpu-lidar
+ii  libgz-sensors8-gpu-lidar-dev:amd64             8.2.2-1~jammy                           amd64        Gazebo Sensors classes and functions for robot apps - Dev files gpu-lidar
+ii  libgz-sensors8-imu:amd64                       8.2.2-1~jammy                           amd64        Gazebo Sensors classes and functions for robot apps - Lib imu
+ii  libgz-sensors8-imu-dev:amd64                   8.2.2-1~jammy                           amd64        Gazebo Sensors classes and functions for robot apps - Dev files imu
+ii  libgz-sensors8-lidar:amd64                     8.2.2-1~jammy                           amd64        Gazebo Sensors classes and functions for robot apps - Lib lidar
+ii  libgz-sensors8-lidar-dev:amd64                 8.2.2-1~jammy                           amd64        Gazebo Sensors classes and functions for robot apps - Dev files lidar
+ii  libgz-sensors8-logical-camera:amd64            8.2.2-1~jammy                           amd64        Gazebo Sensors classes and functions for robot apps - Lib logical-camera
+ii  libgz-sensors8-logical-camera-dev:amd64        8.2.2-1~jammy                           amd64        Gazebo Sensors classes and functions for robot apps - Dev files logical-camera
+ii  libgz-sensors8-magnetometer:amd64              8.2.2-1~jammy                           amd64        Gazebo Sensors classes and functions for robot apps - Lib magnetometer
+ii  libgz-sensors8-magnetometer-dev:amd64          8.2.2-1~jammy                           amd64        Gazebo Sensors classes and functions for robot apps - Dev files magnetometer
+ii  libgz-sensors8-navsat:amd64                    8.2.2-1~jammy                           amd64        Gazebo Sensors classes and functions for robot apps - Lib navsat
+ii  libgz-sensors8-navsat-dev:amd64                8.2.2-1~jammy                           amd64        Gazebo Sensors classes and functions for robot apps - Dev files navsat
+ii  libgz-sensors8-rendering:amd64                 8.2.2-1~jammy                           amd64        Gazebo Sensors classes and functions for robot apps - Lib rendering
+ii  libgz-sensors8-rendering-dev:amd64             8.2.2-1~jammy                           amd64        Gazebo Sensors classes and functions for robot apps - Dev files rendering
+ii  libgz-sensors8-rgbd-camera:amd64               8.2.2-1~jammy                           amd64        Gazebo Sensors classes and functions for robot apps - Lib rgbd-camera
+ii  libgz-sensors8-rgbd-camera-dev:amd64           8.2.2-1~jammy                           amd64        Gazebo Sensors classes and functions for robot apps - Dev files rgbd-camera
+ii  libgz-sensors8-segmentation-camera:amd64       8.2.2-1~jammy                           amd64        Gazebo Sensors classes and functions for robot apps - Lib segmentation-camera
+ii  libgz-sensors8-segmentation-camera-dev:amd64   8.2.2-1~jammy                           amd64        Gazebo Sensors classes and functions for robot apps - Dev files segmentation-camera
+ii  libgz-sensors8-thermal-camera:amd64            8.2.2-1~jammy                           amd64        Gazebo Sensors classes and functions for robot apps - Lib thermal-camera
+ii  libgz-sensors8-thermal-camera-dev:amd64        8.2.2-1~jammy                           amd64        Gazebo Sensors classes and functions for robot apps - Dev files thermal-camera
+ii  libgz-sensors8-wide-angle-camera:amd64         8.2.2-1~jammy                           amd64        Gazebo Sensors classes and functions for robot apps - Lib wide-angle-camera
+ii  libgz-sensors8-wide-angle-camera-dev:amd64     8.2.2-1~jammy                           amd64        Gazebo Sensors classes and functions for robot apps - Dev files wide-angle-camera
+ii  libgz-sim8:amd64                               8.15.0-1~jammy                          amd64        Gazebo Sim classes and functions for robot apps - Shared library
+ii  libgz-sim8-dev:amd64                           8.15.0-1~jammy                          amd64        Gazebo Sim classes and functions for robot apps - Development files
+ii  libgz-sim8-plugins:amd64                       8.15.0-1~jammy                          amd64        Gazebo Sim classes and functions for robot apps - Plugins
+ii  libgz-tools2-dev:amd64                         2.0.4-1~jammy                           amd64        Entry point for using all the suite of Gazebo tools - cmake support
+ii  libgz-transport13:amd64                        13.6.0-1~jammy                          amd64        Gazebo Transport Library - Shared library
+ii  libgz-transport13-core-dev:amd64               13.6.0-1~jammy                          amd64        Gazebo transport Library - Core Dev files
+ii  libgz-transport13-dev:amd64                    13.6.0-1~jammy                          amd64        Gazebo transport Library - Metapackage
+ii  libgz-transport13-log:amd64                    13.6.0-1~jammy                          amd64        Gazebo Transport Library - Log Shared library
+ii  libgz-transport13-log-dev:amd64                13.6.0-1~jammy                          amd64        Gazebo transport Library - Core Dev
+ii  libgz-transport13-parameters:amd64             13.6.0-1~jammy                          amd64        Gazebo Transport Library - Parameters Shared library
+ii  libgz-transport13-parameters-dev:amd64         13.6.0-1~jammy                          amd64        Gazebo transport Library - Parameters Dev
+ii  libgz-utils2:amd64                             2.2.1-1~jammy                           amd64        Gazebo Utils Library - Shared library
+ii  libgz-utils2-cli-dev:amd64                     2.2.1-1~jammy                           amd64        Gazebo Utils Library - CLI Development files
+ii  libgz-utils2-dev:amd64                         2.2.1-1~jammy                           amd64        Gazebo Utils Library - Development files
+ii  libnvidia-cfg1-580:amd64                       580.178.04-0ubuntu0.22.04.1             amd64        NVIDIA binary OpenGL/GLX configuration library
+ii  libnvidia-common-580                           580.178.04-0ubuntu0.22.04.1             all          Shared files used by the NVIDIA libraries
+ii  libnvidia-compute-580:amd64                    580.178.04-0ubuntu0.22.04.1             amd64        NVIDIA libcompute package
+ii  libnvidia-decode-580:amd64                     580.178.04-0ubuntu0.22.04.1             amd64        NVIDIA Video Decoding runtime libraries
+ii  libnvidia-egl-wayland1:amd64                   1:1.1.9-1.1ubuntu0.1                    amd64        Wayland EGL External Platform library -- shared library
+ii  libnvidia-encode-580:amd64                     580.178.04-0ubuntu0.22.04.1             amd64        NVENC Video Encoding runtime library
+ii  libnvidia-extra-580:amd64                      580.178.04-0ubuntu0.22.04.1             amd64        Extra libraries for the NVIDIA driver
+ii  libnvidia-fbc1-580:amd64                       580.178.04-0ubuntu0.22.04.1             amd64        NVIDIA OpenGL-based Framebuffer Capture runtime library
+ii  libnvidia-gl-580:amd64                         580.178.04-0ubuntu0.22.04.1             amd64        NVIDIA OpenGL/GLX/EGL/GLES GLVND libraries and Vulkan ICD
+ii  linux-modules-nvidia-580-5.15.0-191-generic    5.15.0-191.201+1                        amd64        Linux kernel nvidia modules for version 5.15.0-191
+ii  linux-modules-nvidia-580-generic               5.15.0-191.201+1                        amd64        Extra drivers for nvidia-580 for the generic flavour
+ii  linux-objects-nvidia-580-5.15.0-191-generic    5.15.0-191.201+1                        amd64        Linux kernel nvidia modules for version 5.15.0-191 (objects)
+ii  linux-signatures-nvidia-5.15.0-191-generic     5.15.0-191.201+1                        amd64        Linux kernel signatures for nvidia modules for version 5.15.0-191-generic
+ii  novnc                                          1:1.0.0-5                               all          HTML5 VNC client - daemon and programs
+ii  nvidia-compute-utils-580                       580.178.04-0ubuntu0.22.04.1             amd64        NVIDIA compute utilities
+ii  nvidia-driver-580                              580.178.04-0ubuntu0.22.04.1             amd64        NVIDIA driver metapackage
+ii  nvidia-firmware-580-580.178.04                 580.178.04-0ubuntu0.22.04.1             amd64        Firmware files used by the kernel module
+ii  nvidia-kernel-common-580                       580.178.04-0ubuntu0.22.04.1             amd64        Shared files used with the kernel module
+ii  nvidia-kernel-source-580                       580.178.04-0ubuntu0.22.04.1             amd64        NVIDIA kernel source package
+ii  nvidia-prime                                   0.8.17.1                                all          Tools to enable NVIDIA's Prime
+ii  nvidia-settings                                510.47.03-0ubuntu1.22.04.1              amd64        Tool for configuring the NVIDIA graphics driver
+ii  nvidia-utils-580                               580.178.04-0ubuntu0.22.04.1             amd64        NVIDIA driver support binaries
+ii  python3-gz-math7                               7.7.0-1~jammy                           amd64        Gazebo Math Library - Python3 bindings
+ii  python3-gz-msgs10                              10.4.0-1~jammy                          amd64        Set of message definitions used by robotics apps - Dev files
+ii  python3-gz-sim8                                8.15.0-1~jammy                          amd64        Gazebo Sim classes and functions for robot apps - Development files
+ii  python3-gz-transport13                         13.6.0-1~jammy                          amd64        Gazebo transport Library - Python3 bindings
+ii  python3-novnc                                  1:1.0.0-5                               all          HTML5 VNC client - Python 3.x libraries
+ii  python3-websockify                             0.10.0+dfsg1-2build1                    amd64        WebSockets support for any application/server - Python 3
+ii  screen-resolution-extra                        0.18.2ubuntu0.1                         all          Extension for the nvidia-settings control panel
+ii  tightvncpasswd                                 1:1.3.10-5                              amd64        virtual network computing password tool
+ii  tightvncserver                                 1:1.3.10-5                              amd64        virtual network computing server software
+ii  virtualgl                                      3.1.1-20240228                          amd64        A toolkit for displaying OpenGL applications to thin clients
+ii  websockify                                     0.10.0+dfsg1-2build1                    amd64        WebSockets support for any application/server
+ii  xserver-xorg-video-nvidia-580                  580.178.04-0ubuntu0.22.04.1             amd64        NVIDIA binary Xorg driver
