@@ -197,3 +197,12 @@ Siehe `infra/vm-config/README.md`. Nicht gesichert (Geheimnisse): `~/.vnc/passwd
 - `~/QGroundControl.AppImage.old`, `/etc/X11/xorg-vgl.conf.bak-2204`, `/etc/apt/sources.list.d.jammy-backup/`
 - Alter Kernel 5.15.0-203 samt `linux-objects-nvidia-580-5.15.0-203` (→ `sudo apt autoremove` nach Prüfung)
 - Unversionierte `main`-Reste im PX4-Ordner (siehe 3.3), Stash im Submodul `gz`
+
+## Nachtrag 2026-11-15: noVNC-Fehler im Browser
+- Fehler: `The requested module './util/browser.js' does not provide an export named 'dragThreshold'`.
+- Ursache: Browser-Cache mischte JS-Module von noVNC 1.0.0 (22.04) mit 1.3.0 (24.04); websockify sendet keine
+  Cache-Header, harter Reload half nicht. Dateien auf der VM waren korrekt (`curl` geprüft).
+- Lösung in `sim.sh`: eigener Web-Ordner `~/.local/share/novnc-web` mit Symlink `novnc-<Version>` → `/usr/share/novnc`
+  und `index.html`-Weiterleitung. Neue URLs = kein alter Cache; bei noVNC-Updates ändert sich der Pfad automatisch.
+  `/usr/share/novnc/index.html` (eigene Weiterleitung von früher) wird nicht mehr gebraucht.
+- Neue Adresse: `http://localhost:6080/novnc-1.3.0/vnc.html?autoconnect=true&resize=scale`. Geprüft: HTTP 200, WebSocket 101.

@@ -27,16 +27,22 @@ case "${1:-start}" in
       vncserver :1 -geometry 1920x1080 -localhost -nolisten tcp > /dev/null 2>&1
     fi
     # Browser-Viewer für den VNC-Desktop; VS Code leitet Port 6080
-    # automatisch weiter und öffnet ihn im Browser
-    if [ ! -f /usr/share/novnc/index.html ]; then
-      # VS Code öffnet immer "/" -> direkt zum Viewer weiterleiten
-      echo '<meta http-equiv="refresh" content="0; url=vnc.html?autoconnect=true&resize=scale">' \
-        | sudo tee /usr/share/novnc/index.html > /dev/null
+    # automatisch weiter und öffnet ihn im Browser.
+    # noVNC liegt unter einem Pfad mit Versionsnummer, damit der Browser nach
+    # einem noVNC-Update keine alten JS-Module aus dem Cache mischt
+    # (websockify sendet keine Cache-Header).
+    NOVNC_VER="$(dpkg-query -W -f='${Version}' novnc | sed 's/^[0-9]*://; s/-.*//')"
+    NOVNC_WEB="$HOME/.local/share/novnc-web"
+    NOVNC_URL="novnc-$NOVNC_VER/vnc.html?autoconnect=true&resize=scale"
+    mkdir -p "$NOVNC_WEB"
+    ln -sfn /usr/share/novnc "$NOVNC_WEB/novnc-$NOVNC_VER"
+    # VS Code öffnet immer "/" -> direkt zum Viewer weiterleiten
+    echo "<meta http-equiv=\"refresh\" content=\"0; url=$NOVNC_URL\">" > "$NOVNC_WEB/index.html"
+    if ! pgrep -f "websockify --web $NOVNC_WEB" > /dev/null; then
+      pkill -f "websockify --web /usr/share/novnc"   # alte Variante vor dem Umbau
+      nohup websockify --web "$NOVNC_WEB" localhost:6080 localhost:5901 > /dev/null 2>&1 &
     fi
-    if ! pgrep -f "websockify.*6080" > /dev/null; then
-      nohup websockify --web /usr/share/novnc localhost:6080 localhost:5901 > /dev/null 2>&1 &
-    fi
-    echo "Desktop im Browser: http://localhost:6080/vnc.html?autoconnect=true&resize=scale"
+    echo "Desktop im Browser: http://localhost:6080/$NOVNC_URL"
     # Ohne Fenstermanager liegen alle Fenster fest übereinander bei 0,0
     if ! pgrep -x xfwm4 > /dev/null; then
       DISPLAY=:1 nohup xfwm4 > /dev/null 2>&1 &
